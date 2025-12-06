@@ -1,0 +1,128 @@
+Design a classic, premium website for the AI movie app Mood Movies.
+Keep the landing/hero section minimal and elegant, but make the inner sections more lively, cinematic, and entertainment-focused using soft color accents (not neon, not oversaturated).
+
+⭐ STYLE GUIDELINES
+
+Landing page = clean, muted, Apple-like
+
+Other sections = subtle cinematic colors inspired by film posters
+
+Use rich but soft tones:
+
+Deep blue, lavender, warm pink, muted purple, sunset orange
+
+Very soft gradients, ambient glows
+
+Keep everything premium, not playful
+
+Cards should look modern, smooth, slightly vibrant
+
+Add cinema-inspired accents: spotlight effects, soft film grain, subtle lighting
+
+Avoid neon, avoid bright comic colors
+
+📌 SECTIONS TO DESIGN
+1. Hero Section (KEEP AS IT IS — clean / elegant)
+
+Dark navy gradient
+
+Minimal focus on the phone + headline
+
+Soft single accent (lavender or icy blue)
+
+2. How It Works (Make this slightly colorful)
+
+Use entertainment-inspired accent colors for each step:
+
+Soft warm orange
+
+Pastel purple
+
+Deep teal
+
+Muted pink
+
+Cards should have:
+
+Light gradients
+
+Soft spotlight glow
+
+Icon accents
+
+Slight movie-theatre ambiance
+
+3. Features Section (More cinematic, more personality)
+
+Add:
+
+Gradient color tags
+
+Glowing line icons
+
+Soft shadows
+
+Light film-grain texture in the background
+
+Each feature card should feel like:
+tech meets entertainment.
+
+Example vibe: Apple + IMDB + Letterboxd mood.
+
+4. Explore by Mood (Color-coded, but tasteful)
+
+Each mood gets a soft accent color:
+
+Happy → warm yellow
+
+Chill → teal
+
+Romantic → soft pink
+
+Excited → purple
+
+Adventure → orange
+
+Make mood cards:
+
+rounded
+
+gradient-based
+
+lightly glowing
+
+cinematic lighting
+
+NOT neon, NOT childish — premium entertainment color coding.
+
+5. Testimonials (Add warmth + cinematic background)
+
+Slight warm gradient behind cards
+
+Light bokeh effect (blurred theatre lights)
+
+Softer shadows
+
+6. Footer (Classic)
+
+Minimal
+
+Soft gradient top-border
+
+Muted text
+
+Download buttons
+
+🎨 Keywords for the AI
+
+premium entertainment website
+apple style meets netflix
+cinematic gradients
+subtle color accents
+not neon
+light film grain
+ambient glow
+modern minimal ui
+vibrant but classy
+gradient cards
+2025 ui design
