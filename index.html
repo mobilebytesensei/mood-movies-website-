@@ -12,6 +12,9 @@
 </head>
 <body>
 
+    <!-- Animated Sparkle Particles -->
+    <div class="sparkles" id="sparkles"></div>
+
     <!-- Navbar -->
     <nav class="navbar" id="navbar">
         <div class="container">
@@ -414,6 +417,45 @@
                 navLinks.classList.toggle('active');
             });
         }
+
+        // Create animated sparkle particles
+        function createSparkles() {
+            const colors = ['#a78bfa', '#e879f9', '#22d3ee', '#f9a8d4', '#5eead4', '#fde68a'];
+            const sparklesContainer = document.getElementById('sparkles');
+            
+            for (let i = 0; i < 30; i++) {
+                const sparkle = document.createElement('div');
+                sparkle.className = 'sparkle-particle';
+                sparkle.style.left = Math.random() * 100 + '%';
+                sparkle.style.animationDelay = Math.random() * 15 + 's';
+                sparkle.style.animationDuration = (10 + Math.random() * 10) + 's';
+                sparkle.style.background = colors[Math.floor(Math.random() * colors.length)];
+                sparkle.style.boxShadow = `0 0 10px ${sparkle.style.background}, 0 0 20px ${sparkle.style.background}`;
+                sparkle.style.width = (2 + Math.random() * 4) + 'px';
+                sparkle.style.height = sparkle.style.width;
+                sparklesContainer.appendChild(sparkle);
+            }
+        }
+        
+        createSparkles();
+
+        // Add intersection observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.step-card, .feature-card, .mood-card, .testimonial-card').forEach(el => {
+            observer.observe(el);
+        });
     </script>
 
 </body>
