@@ -808,19 +808,479 @@ section { padding: 6rem 0; position: relative; }
     color: rgba(255, 255, 255, 0.5);
 }
 
+/* Tablet Styles */
 @media (max-width: 1200px) {
-    .steps-grid { grid-template-columns: repeat(2, 1fr); }
+    .steps-grid { 
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 1.5rem;
+    }
+    
+    .container { 
+        padding: 0 1.5rem; 
+    }
 }
 
+/* Mobile Landscape */
+@media (max-width: 992px) {
+    .hero h1 { 
+        font-size: clamp(2rem, 6vw, 3.5rem); 
+    }
+    
+    .hero-subtitle { 
+        font-size: 1.1rem; 
+    }
+    
+    .section-title { 
+        font-size: clamp(2rem, 5vw, 3rem); 
+    }
+    
+    .steps-grid, 
+    .features-grid { 
+        grid-template-columns: 1fr; 
+        gap: 1.5rem;
+    }
+    
+    .testimonials-grid { 
+        grid-template-columns: 1fr; 
+        gap: 2rem;
+    }
+}
+
+/* Mobile Portrait */
 @media (max-width: 768px) {
-    .nav-links { display: none; }
-    .mobile-menu-btn { display: flex; }
-    .hero { padding: 8rem 0 4rem; }
-    .hero h1 { font-size: 2.5rem; }
-    .hero-buttons { flex-direction: column; }
-    .btn-primary, .btn-secondary { width: 100%; }
-    .moods-grid, .testimonials-grid { grid-template-columns: 1fr; }
-    .feature-card { flex-direction: column; text-align: center; }
+    .nav-links { 
+        display: none; 
+    }
+    
+    .mobile-menu-btn { 
+        display: flex; 
+    }
+    
+    .btn-download {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .container { 
+        padding: 0 1rem; 
+    }
+    
+    .navbar {
+        padding: 1rem 0;
+    }
+    
+    .navbar.scrolled {
+        padding: 0.75rem 0;
+    }
+    
+    .logo {
+        font-size: 1.25rem;
+    }
+    
+    .logo img {
+        width: 35px;
+    }
+    
+    .hero { 
+        padding: 7rem 0 3rem; 
+    }
+    
+    .hero h1 { 
+        font-size: clamp(1.75rem, 8vw, 2.5rem);
+        margin-bottom: 1rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+        margin: 0 auto 2rem;
+        padding: 0 1rem;
+    }
+    
+    .hero-phone {
+        max-width: 300px;
+        margin: 2rem auto;
+    }
+    
+    .hero-buttons { 
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+    
+    .btn-primary, 
+    .btn-secondary { 
+        width: 100%;
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        text-align: center;
+    }
+    
+    .hero-platforms {
+        flex-wrap: wrap;
+        gap: 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .hero-platforms svg {
+        width: 24px;
+        height: 24px;
+    }
+    
+    section { 
+        padding: 4rem 0; 
+    }
+    
+    .section-header {
+        margin: 0 auto 3rem;
+    }
+    
+    .section-label {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.85rem;
+        margin-bottom: 1rem;
+    }
+    
+    .section-title {
+        font-size: clamp(1.75rem, 7vw, 2.5rem);
+        margin-bottom: 1rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+    
+    .steps-grid,
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .step-card,
+    .feature-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .step-card h3,
+    .feature-content h3 {
+        font-size: 1.3rem;
+    }
+    
+    .step-card p,
+    .feature-content p {
+        font-size: 0.95rem;
+    }
+    
+    .moods-grid { 
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .mood-card {
+        padding: 1.5rem 1rem;
+    }
+    
+    .mood-emoji {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+    
+    .mood-card h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .mood-count {
+        font-size: 0.85rem;
+    }
+    
+    .testimonials-grid { 
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .testimonial-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .testimonial-text {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .testimonial-avatar {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .testimonial-name {
+        font-size: 1rem;
+    }
+    
+    .testimonial-role {
+        font-size: 0.85rem;
+    }
+    
+    .footer {
+        padding: 3rem 0 1.5rem;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    
+    .footer-brand h3 {
+        font-size: 1.5rem;
+    }
+    
+    .footer-column h4 {
+        font-size: 1.1rem;
+        margin-bottom: 1.25rem;
+    }
+    
+    .footer-social {
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+    
+    .footer-social a {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .footer-download {
+        gap: 1rem;
+    }
+    
+    .store-badge {
+        padding: 0.85rem 1.25rem;
+    }
+    
+    .footer-bottom {
+        padding-top: 2rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 0.75rem;
+    }
+    
+    .logo {
+        font-size: 1.1rem;
+    }
+    
+    .logo img {
+        width: 30px;
+    }
+    
+    .btn-download {
+        padding: 0.65rem 1.25rem;
+        font-size: 0.85rem;
+    }
+    
+    .mobile-menu-btn span {
+        width: 24px;
+        height: 2.5px;
+    }
+    
+    .hero {
+        padding: 6rem 0 2rem;
+    }
+    
+    .hero h1 {
+        font-size: 1.5rem;
+        line-height: 1.2;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero-phone {
+        max-width: 250px;
+        margin: 1.5rem auto;
+    }
+    
+    .btn-primary,
+    .btn-secondary {
+        padding: 0.9rem 1.5rem;
+        font-size: 0.95rem;
+    }
+    
+    .hero-platforms {
+        font-size: 0.8rem;
+    }
+    
+    .hero-platforms svg {
+        width: 20px;
+        height: 20px;
+    }
+    
+    section {
+        padding: 3rem 0;
+    }
+    
+    .section-label {
+        padding: 0.5rem 1.25rem;
+        font-size: 0.75rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .section-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .step-card,
+    .feature-card,
+    .testimonial-card {
+        padding: 1.5rem 1rem;
+        border-radius: 20px;
+    }
+    
+    .step-emojis {
+        gap: 0.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .emoji {
+        font-size: 2rem;
+    }
+    
+    .step-number {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+    
+    .step-card h3,
+    .feature-content h3 {
+        font-size: 1.15rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .step-card p,
+    .feature-content p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+    
+    .feature-icon {
+        width: 60px;
+        height: 60px;
+        min-width: 60px;
+    }
+    
+    .feature-icon svg {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .moods-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .mood-card {
+        padding: 1.5rem;
+    }
+    
+    .mood-emoji {
+        font-size: 2.5rem;
+    }
+    
+    .mood-card h3 {
+        font-size: 1rem;
+    }
+    
+    .testimonial-quote {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+    }
+    
+    .testimonial-text {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+    
+    .testimonial-author {
+        gap: 1rem;
+    }
+    
+    .testimonial-avatar {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .testimonial-name {
+        font-size: 0.95rem;
+    }
+    
+    .testimonial-role {
+        font-size: 0.8rem;
+    }
+    
+    .footer-brand h3 {
+        font-size: 1.3rem;
+    }
+    
+    .footer-brand p,
+    .footer-column a {
+        font-size: 0.9rem;
+    }
+    
+    .footer-social a {
+        width: 38px;
+        height: 38px;
+    }
+    
+    .footer-social a svg {
+        width: 18px;
+        height: 18px;
+    }
+    
+    .store-badge {
+        padding: 0.75rem 1rem;
+    }
+    
+    .store-badge svg {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .store-badge span {
+        font-size: 0.7rem;
+    }
+    
+    .store-badge strong {
+        font-size: 0.95rem;
+    }
+    
+    .footer-bottom {
+        font-size: 0.85rem;
+        padding-top: 1.5rem;
+    }
+}
+
+/* Extra Small Devices */
+@media (max-width: 360px) {
+    .hero h1 {
+        font-size: 1.35rem;
+    }
+    
+    .section-title {
+        font-size: 1.35rem;
+    }
+    
+    .moods-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 ::-webkit-scrollbar { width: 12px; }
