@@ -283,36 +283,35 @@ body::before {
 }
 
 .hero-platforms p {
-    font-size: 1.15rem;
+    font-size: 1.70rem;
     margin: 0;
     font-weight: 500;
 }
 
-.platform-badges {
+.combined-badge {
     display: flex;
     align-items: center;
-    gap: 2rem;
-    flex-wrap: wrap;
     justify-content: center;
+    transition: all 0.4s;
 }
 
-.platform-badge {
-    display: block;
+.badge-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: all 0.3s;
-    height: 55px;
 }
 
-.platform-badge img {
-    height: 100%;
+.badge-link img {
+    height: 60px;
     width: auto;
+    object-fit: contain;
     transition: all 0.3s;
-    filter: brightness(0.95);
-    border-radius: 10px;
 }
 
-.platform-badge:hover img {
-    transform: translateY(-5px);
+.badge-link:hover img {
     filter: brightness(1.1) drop-shadow(0 10px 20px rgba(168, 85, 247, 0.5));
+    transform: translateY(-5px) scale(1.05);
 }
 
 .hero-platforms svg { 
@@ -807,54 +806,26 @@ section { padding: 6rem 0; position: relative; }
     transform: translateX(8px);
 }
 
-.footer-download {
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-}
-
-.footer-store-badge {
-    display: block;
-    transition: all 0.4s;
-    height: 50px;
-}
-
-.footer-store-badge img {
-    height: 100%;
-    width: auto;
-    transition: all 0.3s;
-    border-radius: 8px;
-}
-
-.footer-store-badge:hover {
-    transform: translateY(-5px);
-}
-
-.footer-store-badge:hover img {
-    filter: brightness(1.1) drop-shadow(0 10px 20px rgba(168, 85, 247, 0.5));
-}
-
-.store-badge {
+.combined-badge-footer {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    padding: 1rem 1.5rem;
-    background: rgba(255, 255, 255, 0.05);
-    border: 2px solid rgba(255, 255, 255, 0.15);
-    border-radius: 16px;
-    text-decoration: none;
+    justify-content: flex-start;
     transition: all 0.4s;
 }
 
-.store-badge:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: rgba(168, 85, 247, 0.5);
-    transform: translateY(-3px);
+.combined-badge-footer .badge-link img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    transition: all 0.3s;
 }
 
-.store-badge svg { width: 28px; height: 28px; }
-.store-badge span { font-size: 0.8rem; color: rgba(255, 255, 255, 0.5); }
-.store-badge strong { font-size: 1.05rem; font-weight: 700; }
+.combined-badge-footer .badge-link:hover img {
+    transform: translateY(-5px) scale(1.05);
+    filter: drop-shadow(0 10px 20px rgba(168, 85, 247, 0.5));
+}
+
+
 
 .footer-bottom {
     text-align: center;
@@ -980,12 +951,12 @@ section { padding: 6rem 0; position: relative; }
         font-size: 1rem;
     }
     
-    .platform-badges {
+    .combined-badge {
         gap: 1.5rem;
     }
     
-    .platform-badge {
-        height: 45px;
+    .badge-link img {
+        height: 50px;
     }
     
     .hero-platforms svg {
@@ -1116,18 +1087,6 @@ section { padding: 6rem 0; position: relative; }
         height: 40px;
     }
     
-    .footer-download {
-        gap: 1rem;
-    }
-    
-    .footer-store-badge {
-        height: 45px;
-    }
-    
-    .store-badge {
-        padding: 0.85rem 1.25rem;
-    }
-    
     .footer-bottom {
         padding-top: 2rem;
         font-size: 0.9rem;
@@ -1191,8 +1150,20 @@ section { padding: 6rem 0; position: relative; }
         font-size: 0.95rem;
     }
     
-    .platform-badge {
-        height: 40px;
+    .combined-badge {
+        gap: 1rem;
+    }
+    
+    .badge-link img {
+        height: 45px;
+    }
+    
+    .combined-badge-footer {
+        gap: 1rem;
+    }
+    
+    .combined-badge-footer .badge-link img {
+        height: 45px;
     }
     
     .hero-platforms svg {
@@ -1322,27 +1293,6 @@ section { padding: 6rem 0; position: relative; }
     .footer-social a svg {
         width: 18px;
         height: 18px;
-    }
-    
-    .footer-store-badge {
-        height: 40px;
-    }
-    
-    .store-badge {
-        padding: 0.75rem 1rem;
-    }
-    
-    .store-badge svg {
-        width: 24px;
-        height: 24px;
-    }
-    
-    .store-badge span {
-        font-size: 0.7rem;
-    }
-    
-    .store-badge strong {
-        font-size: 0.95rem;
     }
     
     .footer-bottom {
